@@ -1,0 +1,35 @@
+/*Name:Shweta Bajpai
+roll no=L1205*/
+// hotel room cost:Assignment 2
+#include <stdio.h>
+int main() 
+{
+	int people, nights, tour, base, discount, final;
+	printf("enter no. of people:");
+	scanf("%d", &people);
+
+	printf("enter no. of nights people staying:");
+	scanf("%d", &nights);
+
+	printf("staying for business tour(1 or0):");
+	scanf("%d", &tour);
+
+	if (people >= 2) 
+	{
+		base = (500 + 1000 * people) * nights;
+	}
+	
+	if (tour == 1)
+	{
+		discount = base * 0.2;
+		printf("discount:%d\n", discount);
+		final = base - discount;
+		printf("your room cost with discount is %d", final);
+	} 
+	else 
+	{
+		final = base;
+		printf("your final cost is%d", base);
+	}
+	return 0;
+}
